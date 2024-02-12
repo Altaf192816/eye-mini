@@ -1,0 +1,87 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #a1665e;
+    width: 35vw;
+    height: 45vh;
+    border-radius: 50%;
+}
+
+.eyes {
+    background-color: lightgrey;
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    border-radius: 50%;
+    box-shadow: 0 0 3px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 8px 8px 8px;
+    transition: background-color 1s ease-out;
+}
+
+.eye-retina {
+    display: inline-block;
+    background-color: #222;
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.eye-lash {
+    position: absolute;
+    background-color: #a1665e;
+    height: 50%;
+    width: 100%;
+    z-index: 1;
+}
+
+.up {
+    top: -50%;
+    animation: blinkbottom 10s linear infinite;
+}
+
+.down {
+    bottom: -50%;
+    animation: blinktop 10s linear infinite;
+}
+
+@keyframes blinkbottom {
+    0% {
+        top: -50%;
+    }
+
+    5% {
+        top: 0;
+    }
+
+    10% {
+        top: -50%;
+    }
+}
+
+@keyframes blinktop {
+    0% {
+        bottom: -50%;
+    }
+
+    5% {
+        bottom: 0;
+    }
+
+    10% {
+        bottom: -50%;
+    }
+}
